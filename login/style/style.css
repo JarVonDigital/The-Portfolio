@@ -82,7 +82,7 @@ body {
 }
 .main-content .login-container form.login .login-sheet {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
   width: 100vw;
   min-width: 600px;
@@ -91,36 +91,40 @@ body {
   background-color: #E9EDC9;
   border-radius: 10px;
 }
-.main-content .login-container form.login .login-sheet .input-item {
+.main-content .login-container form.login .login-sheet .input-items {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.main-content .login-container form.login .login-sheet .input-items .input-item {
   flex: 1;
   display: flex;
   align-items: center;
-  gap: 30px;
   margin: 0 30px;
 }
-.main-content .login-container form.login .login-sheet .input-item picture {
+.main-content .login-container form.login .login-sheet .input-items .input-item picture {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 40px;
   background-color: #CCD5AE;
   padding: 20px;
 }
-.main-content .login-container form.login .login-sheet .input-item picture img {
+.main-content .login-container form.login .login-sheet .input-items .input-item picture img {
   height: 30px;
   width: 30px;
 }
-.main-content .login-container form.login .login-sheet .input-item .input-container {
+.main-content .login-container form.login .login-sheet .input-items .input-item .input-container {
   flex: 1;
   display: flex;
   flex-direction: column;
   height: 70px;
-  border-radius: 10px;
+  border-radius: 0 10px 10px 0;
   box-shadow: 0px 0px 10px -8px;
   background-color: white;
   overflow: hidden;
 }
-.main-content .login-container form.login .login-sheet .input-item .input-container label {
+.main-content .login-container form.login .login-sheet .input-items .input-item .input-container label {
   background-color: transparent;
   padding: 10px 10px 0;
   font-family: "Red Hat Display", sans-serif;
@@ -128,7 +132,7 @@ body {
   color: rgb(80, 80, 80);
   font-size: 12px;
 }
-.main-content .login-container form.login .login-sheet .input-item .input-container input {
+.main-content .login-container form.login .login-sheet .input-items .input-item .input-container input {
   flex: 1;
   border: none;
   height: 100%;
@@ -141,8 +145,28 @@ body {
   color: rgb(80, 80, 80);
   font-size: 14px;
 }
-.main-content .login-container form.login .login-sheet .input-item:first-of-type {
-  border-bottom: 2px solid #CCD5AE;
+.main-content .login-container form.login .login-sheet .input-items .input-item:first-of-type {
+  border-bottom: 1px solid #CCD5AE;
+}
+.main-content .login-container form.login .login-sheet .other-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 25px;
+  width: 100px;
+  padding: 15px 0;
+  margin: 15px 0;
+  border-left: 1px solid #CCD5AE;
+  overflow: hidden;
+}
+.main-content .login-container form.login .login-sheet .other-links img {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.main-content .login-container form.login .login-sheet .other-links img:hover {
+  opacity: 0.6;
 }
 
 /*# sourceMappingURL=style.css.map */
